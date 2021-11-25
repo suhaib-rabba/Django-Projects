@@ -1,0 +1,26 @@
+{% extends "base2.html" %}
+
+
+{% block content %}
+<br>
+<br>
+<h1 class='text-center container'> we are inside login template iside templateModulApp</h1>
+
+
+<form class="" action="{% url 'login'   %}" method="post">{% csrf_token %}
+  {% csrf_token %}
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">user/label>
+    <input type="text" class="form-control" name=user id="user" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control"name='password' id="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br><br><br>
+{% endblock %}

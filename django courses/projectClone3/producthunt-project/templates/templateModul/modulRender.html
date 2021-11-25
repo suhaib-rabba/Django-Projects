@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content   %}
+
+
+{% if x %}
+
+<h1>{{x}}: this is x</h1>
+{% elif y %}
+<h2>{{y}}: this is y</h2>
+{% elif z %}
+<h3>{{z}}:this is z</h3>
+{% else %}
+<h3>it is not found</h3>
+{% endif %}
+
+{% if الفيصلية %}
+{% for item in objects.all  %}
+{% if item.title == 'الفيصلية'  %}
+{{item.body}}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<hr>
+<hr>
+
+{% if جرينة  %}
+{% for item in objects.all  %}
+{% if item.title == 'جرينة'  %}
+{{item.body}}
+<hr>
+<h2 ><a href={% url 'detail' item.id  %}>المنتج</a></h2>
+<hr>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<br><br>
+{%  endblock  %}
